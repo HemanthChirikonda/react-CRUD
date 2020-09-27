@@ -26,7 +26,7 @@ class CreateStudent extends React.Component {
         let name = this.state.newStudent
         async function createStudent() {
 
-            let data = await fetch("http://localhost:3030/student", {
+            let data = await fetch("https://zenclass-demo-server.herokuapp.com/student", {
                 "method": "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ class CreateStudent extends React.Component {
         console.log("Read")
         let details;
         async function getAllStudents() {
-            let data = await fetch("http://localhost:3030/students");
+            let data = await fetch("https://zenclass-demo-server.herokuapp.com/students");
             data = await data.json();
             //console.log(data);
             details = data;
@@ -67,7 +67,7 @@ class CreateStudent extends React.Component {
         console.log(info)
         async function updateStudent() {
 
-            let data = await fetch("http://localhost:3030/updatestudent", {
+            let data = await fetch("https://zenclass-demo-server.herokuapp.com/updatestudent", {
                 "method": "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ class CreateStudent extends React.Component {
         }
         async function deleteStudent() {
 
-            let data = await fetch("http://localhost:3030/removestudent", {
+            let data = await fetch("https://zenclass-demo-server.herokuapp.com/removestudent", {
                 "method": "POST",
                 headers: {
                     'Content-Type': 'application/json'
